@@ -1,49 +1,61 @@
+package Array;
+
+import java.util.Scanner;
+
 public class Array001 {
+
 	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
 		
-		//declaration
-		int a[] = new int[5];
+		System.out.println("Enter Number of Row :");
+		int row = sc.nextInt();
 		
-		//initialization
-		a[0] = 10;
-		a[1] = 20;
-		//a[5] = 56;  exeption
+		System.out.println("Enter Number of Colum :");
+		int colum = sc.nextInt();
 		
-		for(int i=0;i<a.length;i++)
+		int a[][] = new int[row][colum];
+		int b[][] = new int[row][colum];
+		
+		for(int i=0; i<row; i++)
 		{
-			System.out.println(a[i]);
+			for(int j=0; j<colum; j++)
+			{
+				System.out.println("Enter Value of A :");
+				a[i][j]=sc.nextInt();
+				System.out.println("Enter Value of B :");
+				b[i][j]=sc.nextInt();
+			}
 		}
 		
-		System.out.println("*******************");
-		
-		int b[] = {10,20,30,40,50,60};
-		
-//		for (int i = 0; i < b.length; i++) {
-//			System.out.println(b[i]);
-//		}
-		
-		for(int k : b)
+		for(int i=0; i<row; i++)
 		{
-			System.out.println(k);
+			for(int j=0; j<colum; j++)
+			{
+				System.out.print(a[i][j] +" ");
+			}
+			System.out.println();
 		}
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
 		
-		System.out.println("********************");
-		
-		String subject[] = {"java","php","android","python"};
-		
-		for(String s : subject)
+		for(int i=0; i<row; i++)
 		{
-			System.out.println(s);
+			for(int j=0; j<colum; j++)
+			{
+				System.out.print(b[i][j] +" ");
+			}
+			System.out.println();
 		}
+		System.out.println("=====================================");
 		
-		System.out.println("*********************");
-		
-		char ch[] = {'A','B','C','D'};
-		
-		for(char c : ch) 
+		for(int i=0; i<row; i++)
 		{
-			System.out.println(c);
+			for(int j=0; j<colum; j++)
+			{
+				System.out.print(a[i][j]+b[i][j] +" ");
+			}
+			System.out.println();
 		}
 	}
-}
 
+}
